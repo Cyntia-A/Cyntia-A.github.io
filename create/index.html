@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+</head>
+
+<body>
+    <script>
+        let petals = 15;
+
+        function setup() {
+            createCanvas(600, 400);
+        }
+
+        function draw() {
+
+            background(100, 107, 105);
+
+            fill(144, 169, 209);
+            ellipse(290, 160, 20, 50);
+
+            noStroke();
+            fill(124, 97, 32);
+            ellipse(width / 2, height / 2, 65, 50);
+
+            fill(161, 189, 234);
+            ellipse(300, 160, 20, 50);
+        }
+        let angle = [23];
+        var x;
+        var y;
+        let timer = 0;
+
+        function setup() {
+            createCanvas(600, 400);
+            frameRate(10);
+            angleMode(DEGREES);
+
+            x = width / 2;
+            y = 300;
+        }
+
+
+        function draw() {
+
+            background(97, 162, 226);
+            timer = timer + 1;
+
+            fill(255);
+            textSize(20);
+            text(timer, 20, 20);
+            noStroke();
+
+
+            fill(124, 97, 32);
+            ellipse(width / 2, height / 2, 70, 70);
+
+
+            fill(244, 191, 66);
+            translate(300, 200);
+
+            fill(89, 145, 26);
+            rect(-10, 52, 20, 150, 10);
+
+            noStroke();
+
+            drawPetals();
+            animateBee();
+
+        }
+
+        function animateBee() {
+            fill(186, 162, 55);
+            ellipse(x, y, 40, 25);
+
+            if (y > 0) {
+                y = y - 5;
+                x = x - 5;
+            }
+            if (timer === 60) {
+                y = 0;
+                x = 0;
+            }
+            if (timer > 110) {
+                x = 300;
+                y = 300;
+
+                timer = 0 + 1;
+            }
+            if (timer >= 70) {
+                y = y - 5;
+                x = x - 5;
+            }
+
+        }
+
+        function drawPetals() {
+
+            for (let i = 0; i < petals; i++) {
+                fill(244, 244, 83);
+                rotate(24);
+                ellipse(15, 48, 20, 50);
+            }
+        }
+    </script>
+</body>
+
+</html>
