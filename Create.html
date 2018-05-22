@@ -1,0 +1,102 @@
+
+
+<html>
+    <head>
+            <title>AP Create Task</title>
+            <link href="stylesheet.css" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Josefin+Sans|Supermercado+One" rel="stylesheet">
+    </head>
+    <body>
+        <br>
+        <h1>Cyntia's Site</h1>
+        
+        <div class = "nav">
+            <a class="nav-item" href="index.html">Home</a>
+            <a class="nav-item" href= "Strengths.html">Strengths</a>
+            <a class="nav-item" href="College.html">College</a>
+            <a class="nav-item" href="Explore.html">AP Explore</a>
+            <a class="here">AP Create</a>
+            <a class = "nav-item" href = "Research.html">Research</a>
+        </div>
+        
+        <div class = "Explore">
+            <p class = "Text">2a) 
+            My program is written in javascript in Popcode, a development environment. 
+            The purpose of my program is to have a bee fly towards the flower. 
+            The bee would stay at the flower for a few seconds and then fly off the screen. 
+            In this video, you can see the bee gliding towards the center, staying still for a few seconds and fly off the screen. 
+            After it disappears from the screen, the process will repeat itself. </p>
+
+            <p class = "Text">2b) 
+             My partner and I used iterative pair programming by working on Glitch, a platform that enables coders to work on the coding page. 
+             My partner and I worked on the basic code of the sunflower. 
+             We created the code to make the petals, center, and the stem. 
+             I wrote the code to animating the bee independently. 
+             The first developmental challenge I encountered was to make the bee move away from the center after a certain time. 
+             The reason why this happened was because the code created to move the bee was interfering with the if statement. 
+             I solved this challenge by putting all of the animation code in if statements, so they do not interfere or overlap each other. 
+             The second developmental challenge I encountered was to get the timer to correspond with my code. 
+             At some point, when the timer reached the time given, the code would not run. 
+             I had set the code to say if the timer is equal to 70, then move the bee. 
+             This caused the bee to only move when the timer hit 70. 
+             I solved this challenge by rewriting the code to say if the timer is greater than or equal to 70, then move the bee. 
+             That way when the timer passes 70, it will continue moving.</p>
+
+            <p>2c)
+            	The main algorithm I use is the draw() function. 
+            	In the draw() function, it includes code that creates the petals of the flower, the timer , and the bee gliding across the screen. 
+            	The draw() function includes a logical algorithm like the code segment shown below:
+            <div class = "Code">
+              if (timer >= 70) {
+              <br>
+                 y = y - 5;
+                 <br>
+                 x = x - 5;
+                 <br>
+             }
+             </div>
+            <p>
+            The purpose of this code segment is to allow the bee to continue gliding after it stops. 
+            When the algorithm is working, this allows the bee to continue gliding after it stopped when the timer passes 70 seconds. 
+            If this algorithm did not work, the bee would stay in the center of the canvas and not glide anymore.</p>
+            <p>
+            The draw() function also includes the math algorithm shown below: 
+            </p>
+            <div class = "Code">
+             y = y - 5;
+             <br>
+             x = x - 5;
+            </div>
+            <p>
+            The purpose of this code segment is allow the bee to move across the screen. 
+            When the algorithm is working, the bee will move across the X and Y axis. 
+            This is possible because the Y position is being subtracted by five which allows it to move on the Y axis. 
+            It is possible to move across the screen instead of moving up because the X position is also being subtracted by five. 
+            If this algorithm was not included, the bee would not be able to move at all.</p> 
+
+            <br>
+            <div class = "Code">
+            function drawPetals() {
+            <p>    for (let i = 0; i < petals; i++) {
+                    <br>
+                    fill(244, 244, 83);
+                    <br>
+                    rotate(24);
+                    <br>
+                    ellipse(15, 48, 20, 50);
+                    <br>
+                }
+            </p>
+            </div>
+            
+            <p>2d)            
+            An example of an abstraction is my drawPetals() function. 
+            The purpose of this function is to draw the petals around the origin. 
+            I created the drawPetals() function to avoid repeating the same code over and over again.  
+            Without this abstraction, I would have to code each petal manually instead of putting it in a loop.</p>
+            <br>
+
+        </div>
+    
+    </body>
+</html>
